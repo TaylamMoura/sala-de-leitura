@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Sala de Leitura</title>
+</head>
+<body>
+    <img id="logotipo" src="assets/botao-check.png">
+    <button onclick="adicionarLivro()" type="button" id="adicionarLivros">+</button>
+    <h2>Sala de Leitura</h2>
+    <form id="buscarLivroForm" style="display: none;" onsubmit="return buscarLivro()">
+        <input type="text" id="tituloLivro" placeholder="Digite o título do livro">
+        <button type="submit">Buscar</button>
+    </form>
+    <div class="grid-container">
+        <h4>Minhas Leituras</h4>
+        <div id="minhasLeituras">
+            <!-- Capas dos livros adicionadas pelo usuário -->
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

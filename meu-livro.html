@@ -1,0 +1,35 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Minha Leitura</title>
+</head>
+<body>
+    <img id="logotipo" src="assets/botao-check.png" >
+
+    <h2>Minha Leitura</h2>
+    <div class="livro-informacao">
+        <img id="capaLivro" alt="Capa do livro">
+    </div>
+
+    <p id="tituloLivro">Livro: </p>
+    <p id="autorLivro">Autor: </p>
+    <p id="paginasLivro">Páginas </p>
+
+    <button onclick="iniciarSessao()" type="button" id="iniciar-sessao"">Iniciar sessão</button>
+    <button onclick="window.location.href='temporizador.html'">Iniciar Sessão</button>
+
+    <script>
+        //Carrega os detalhes do livro do localStorage
+        const livroSelecionado = JSON.parse(localStorage.getItem('livroSelecionado'));
+
+        if (livroSelecionado) {
+            document.getElementById('capaLivro').src = livroSelecionado.capa;
+            document.getElementById('tituloLivro').textContent = `Livro: ${livroSelecionado.titulo}`;
+            document.getElementById('autorLivro').textContent = `Autor: ${livroSelecionado.autor}`;
+            document.getElementById('paginasLivro').textContent = `Páginas: ${livroSelecionado.paginas}`;
+        }
+    </script>
+</body>
+</html>

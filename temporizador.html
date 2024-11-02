@@ -1,0 +1,22 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Minha Leitura</title>
+</head>
+<body>
+    <img id="logotipo" src="assets/botao-check.png" >
+
+    <form id="definir-tempo">
+        <input type="number" id="temporizador" placeholder="Definir tempo em minutos">
+        <button onclick="comecarTempo()" type="button" id="botao-comecar-temporizador">Começar</button>
+    </form>
+    <script>
+        document.getElementById('definir-tempo').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = 'sessao-leitura.html';
+        });
+    </script>
+</body>
+</html>

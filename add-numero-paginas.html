@@ -1,0 +1,30 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <img id="logotipo" src="assets/botao-check.png" >
+    <p>Nome do Livro</p>
+    <p>Páginas lidas hoje: </p>
+    <p>página __ /___</p>
+  
+    <button onclick="paginaInicial()" type="button" id="paginaInicial">back</button>
+
+    <form id="adicionar-paginas">
+        <input type="number" id="paginas-lidas" name="paginas" placeholder="Número de páginas lidas">
+        <button type="submit">Salvar</button>
+    </form>
+   <button oncanplay="window.location.href='index.html'">Back</button>
+   <script>
+    document.getElementById('adicionar-paginas').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Lógica para salvar o número de páginas lidas
+        window.location.href = 'index.html';
+    });
+</script>
+
+</body>
+</html>
